@@ -55,7 +55,7 @@
    -------------------------------------------------------------------------- */
 body {
   font-family: var(--fonte);
-  font-size: 1rem;
+  font-size: 16px; /* TODO Gabriel: mudar tamanho para 1rem */
   line-height: 1.6;
   color: var(--texto);
   background-color: var(--fundo);
@@ -248,7 +248,7 @@ section {
   border: 1px solid var(--linha);
   border-top: 3px solid var(--principal);
   border-radius: 6px;
-  padding: var(--e-3);
+  padding: 10px; /* TODO Gabrielle: trocar para var(--e-3) */
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, border-color 0.2s ease;
@@ -430,7 +430,7 @@ section {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--principal);
+  color: inherit; /* TODO Daniel: mudar para var(--principal) */
 }
 
 .nav-link.active::after {
@@ -559,7 +559,7 @@ th {
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--superficie-alt);
+  background-color: transparent; /* TODO Maria Eduarda: trocar para var(--superficie-alt) */
 }
 
 tbody tr:hover {
@@ -701,7 +701,7 @@ select:focus,
 textarea:focus,
 button:focus,
 a:focus {
-  outline: 2px solid var(--realce);
+  outline: none; /* TODO Angelina: trocar para 2px solid var(--realce) */
   outline-offset: 2px;
   border-color: var(--realce);
 }
