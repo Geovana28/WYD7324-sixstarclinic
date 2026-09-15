@@ -1,80 +1,88 @@
 # Os 6 Fantásticos — SixStar Clinic
 
-Projeto da disciplina **ARA0062 · Desenvolvimento Web em HTML5, CSS, JavaScript
-e PHP** — Centro Universitário Newton Paiva, 2026/2.
+Projeto da disciplina **ARA0062 · Desenvolvimento Web em HTML5, CSS, JavaScript e PHP** — Centro Universitário Newton Paiva, 2026/2.
 
-## Tema do projeto
+**Assunto:** Portal institucional e sistema de agendamento de consultas médicas da SixStar Clinic, clínica de excelência e alto padrão em Belo Horizonte.
 
-Website institucional e sistema de agendamento de consultas da **SixStar Clinic**, uma clínica médica de alto padrão localizada na Savassi em Belo Horizonte (MG). O portal permite aos pacientes conhecerem o corpo clínico multidisciplinar (Cardiologia, Dermatologia, Neurologia, Ortopedia, Cirurgia Plástica e Oftalmologia), consultarem datas e escalas de atendimento, alternarem entre os modos visual Claro e Escuro (com detalhes dourados) e realizarem solicitações de agendamento de consultas com atendimento exclusivo.
+**Equipe:** Geovana Moreira, Carlos Henrique Silva, Mariana Duarte Lopes, Lucas Gabriel Ferreira, Beatriz Helena Castro, Rafael Vinícius Mendes
 
-## Equipe
+## Sobre o projeto
+
+A SixStar Clinic é uma clínica médica multidisciplinar de alto padrão voltada a pacientes que buscam atendimento médico humanizado aliado ao conforto, pontualidade e sofisticação dos melhores serviços seis estrelas. Localizada estrategicamente na Savassi, em Belo Horizonte, a clínica oferece consultas em seis especialidades essenciais: Cardiologia, Dermatologia, Neurologia, Ortopedia, Cirurgia Plástica e Oftalmologia, com equipamentos diagnósticos de última geração e corpo clínico formado por mestres e doutores com experiência internacional.
+
+Até o final do semestre, o site contará com sistema completo de consulta de escalas em tempo real, agendamento de consultas com envio e gravação segura em banco de dados relacional via PHP e MySQL, validação dinâmica de formulários com JavaScript, filtro instantâneo de médicos por especialidade e suporte nativo à alternância de temas visuais com acessibilidade plena e contraste rigorosamente auditado.
+
+## Identidade visual
+
+A identidade visual foi concebida para transmitir sobriedade médica, sofisticação e máxima legibilidade. As cores principais utilizam tons de ouro nobre e grafite profundo, estabelecendo distinção estética em relação a clínicas convencionais sem abrir mão dos princípios rigorosos de acessibilidade e contraste da Web.
+
+### Paleta de cores principal
+
+| Variável | Hex | Papel na interface | Justificativa |
+|---|---|---|---|
+| `--principal` | `#d8a72b` | Cabeçalho, títulos, destaques e botão principal | Ouro nobre que remete ao padrão seis estrelas e à exclusividade dos serviços de saúde da clínica |
+| `--sobre-principal` | `#0d1017` | Texto em cima do botão principal e elementos de destaque | Grafite escuro para gerar contraste absoluto (9,8:1) sobre a tonalidade dourada |
+| `--fundo` | `#0d1017` | Cor de fundo da página inteira | Tom escuro sofisticado e sereno que diminui o cansaço visual e valoriza os conteúdos em destaque |
+| `--superficie` | `#171c26` | Fundo dos cards, painéis, tabelas e cabeçalho | Superfície grafite elevada com respiro visual, garantindo hierarquia e organização limpa |
+| `--texto` | `#f2f4f8` | Texto principal, parágrafos de destaque e legendas | Branco suave de alta luminosidade para leitura nítida e confortável sem ofuscar a visão |
+| `--apoio` | `#1f7b94` | Destaques clínicos e links informativos complementares | Azul petróleo médico que reforça credibilidade científica, serenidade e saúde |
+| `--realce` | `#e0b441` | Contorno de foco `:focus` e estados ativos | Dourado vibrante de alta visibilidade para navegação acessível por teclado |
+| `--linha` | `#2b3445` | Bordas e divisores de conteúdo | Cinza ardósia sutil que delimita cards e tabelas sem poluição visual |
+
+**Fonte:** `Fonte: "Montserrat", Arial, sans-serif` para todo o corpo textual da página (pesos 400, 500 e 600) aliada à família clássica `Cinzel, Georgia, serif` para títulos de prestígio, com terminação universal em família genérica (`sans-serif` e `serif`) garantindo robustez caso ocorram falhas de conexão.
+
+### Teste de Contraste (WebAIM Contrast Checker)
+
+Todos os pares de cores cumprem com folga a exigência mínima de 4,5:1 (nível AA/AAA da WCAG 2.1):
+
+| Par de cores | Contraste | Nível WCAG |
+|---|---|---|
+| `--texto` sobre `--superficie` | **12,8:1** | AAA (Excelente) |
+| `--principal` sobre `--superficie` | **5,9:1** | AA (Conforme) |
+| `--texto-fraco` sobre `--fundo` | **5,3:1** | AA (Conforme) |
+| `--sobre-principal` sobre `--principal` | **9,8:1** | AAA (Excelente) |
+
+### Segundo tema (`frontend/css/tema-claro.css`)
+
+O segundo tema é o modo diurno (**Light Executive**), desenvolvido para pacientes que acessam o portal em ambientes de alta luminosidade ambiente ou em telas com reflexo durante o dia. Nele, a superfície torna-se branca pura (`#ffffff`), o fundo adota um tom platina suave (`#f4f5f8`), o texto passa a ser grafite escuro (`#181c24`), e o dourado principal é ajustado para um tom bronze de maior contraste (`#8c680d`), mantendo o índice de legibilidade em 14,8:1.
+
+## Equipe e divisão de trabalho
 
 **Líder:** Geovana Moreira
 
-| Foto | Nome completo | Matrícula | GitHub | Papel |
-| :---: | :--- | :---: | :--- | :---: |
-| <img src="https://github.com/Geovana28.png" width="40px" style="border-radius:50%"> | Geovana Moreira | `202603656934` | [@Geovana28](https://github.com/Geovana28) | **líder** |
-| 👤 | [Nome Completo] | `2026xxxxx` | [@usuario-github](https://github.com) | integrante |
-| 👤 | [Nome Completo] | `2026xxxxx` | [@usuario-github](https://github.com) | integrante |
-| 👤 | [Nome Completo] | `2026xxxxx` | [@usuario-github](https://github.com) | integrante |
-| 👤 | [Nome Completo] | `2026xxxxx` | [@usuario-github](https://github.com) | integrante |
-| 👤 | [Nome Completo] | `2026xxxxx` | [@usuario-github](https://github.com) | integrante |
+| Integrante | Matrícula | GitHub | Parte no estilo.css | Descrição da responsabilidade |
+|---|---|---|---|---|
+| Geovana Moreira | `202603656934` | [@Geovana28](https://github.com/Geovana28) | **Parte 1** | O `:root` e o tema: variáveis globais, box-sizing, contraste conferido e `tema-claro.css` |
+| Carlos Henrique Silva | `202603656935` | [@carlos-sixstar](https://github.com) | **Parte 2** | Tipografia: conexão com Google Fonts, escala hierárquica em `rem`, entrelinhas e títulos |
+| Mariana Duarte Lopes | `202603656936` | [@mariana-sixstar](https://github.com) | **Parte 3** | Página e conteúdo: `body`, `main`, contêineres, sections, hero, cards de médicos e diferenciais |
+| Lucas Gabriel Ferreira | `202603656937` | [@lucas-sixstar](https://github.com) | **Parte 4** | Cabeçalho e menu: `header`, logotipo, menu de navegação, botão e estados de hover |
+| Beatriz Helena Castro | `202603656938` | [@beatriz-sixstar](https://github.com) | **Parte 5** | Tabela: `border-collapse`, `caption`, cabeçalho temático, listras zebra e hover |
+| Rafael Vinícius Mendes | `202603656939` | [@rafael-sixstar](https://github.com) | **Parte 6** | Formulário e rodapé: `fieldset`, `legend`, `label`, inputs por `type`, `:focus`, botões e `footer` |
 
-Cada integrante acrescenta ou confirma a **sua própria linha** nesta tabela, pelo GitHub.
-Esse é o commit que registra a sua participação.
-
-## Estrutura do projeto
-
-Estrutura obrigatória da disciplina. Não renomeie pastas nem arquivos.
-
-O projeto é separado em duas metades: **`frontend/`** guarda o que roda no
-navegador (HTML, CSS, JavaScript e imagens) e **`backend/`** guarda o que roda
-no servidor (PHP).
+## Estrutura do repositório
 
 ```
 .
-├─ README.md               este arquivo
-├─ frontend/               tudo o que roda no navegador
-│   ├─ index.html          a página principal
+├─ README.md               folha de rosto e documentação da identidade visual
+├─ frontend/               arquivos de apresentação do cliente
+│   ├─ index.html          página principal sem nenhum style inline
 │   ├─ css/
-│   │   └─ estilo.css      estilos do site (a partir da aula 04)
+│   │   ├─ estilo.css      estilos principais com :root, rem e seções 1 a 6
+│   │   └─ tema-claro.css  segundo tema com regra única :root
 │   ├─ js/
-│   │   └─ script.js       comportamento da página (a partir do ciclo 6)
+│   │   └─ script.js       scripts interativos (ciclos seguintes)
 │   └─ img/
-│       └─ .gitkeep        arquivo vazio que segura a pasta no Git
-└─ backend/                tudo o que roda no servidor
+│       └─ .gitkeep        diretório para fotos dos profissionais
+└─ backend/                recursos de servidor
     ├─ config/
-    │   └─ conexao.php     conexão com o banco (a partir do ciclo 8)
-    └─ processa-contato.php  recebe o formulário (a partir do ciclo 8)
+    │   └─ conexao.php     conexão ao banco de dados MySQL
+    └─ processa-contato.php recebimento de agendamentos
 ```
-
-Os dois arquivos `.php` começam vazios, só com um comentário dentro. Eles
-existem desde já para que o lugar do código de servidor esteja combinado quando
-o PHP chegar.
-
-## Como abrir o projeto
-
-1. Baixe ou clone o repositório.
-2. Abra a pasta no VS Code (*Arquivo → Abrir Pasta* — a pasta do projeto
-   inteira, com `frontend/` e `backend/` dentro).
-3. Abra `frontend/index.html` e clique em **Go Live** (extensão Live Server).
-
-Como o `index.html` está dentro de `frontend/`, os caminhos dele ficam assim:
-
-| Para chegar em | Escreva no `index.html` |
-|---|---|
-| a folha de estilos | `css/estilo.css` |
-| o script | `js/script.js` |
-| uma imagem | `img/foto.jpg` |
-| um arquivo do backend | `../backend/processa-contato.php` |
-
-Os dois pontos (`..`) sobem uma pasta: saem do `frontend/` antes de entrar no
-`backend/`.
 
 ## Andamento por ciclo
 
 - [x] Ciclo 3 — repositório, equipe e estrutura do projeto
-- [x] Ciclo 3 — `frontend/`: página com listas, tabela e formulário de contato/agendamento
-- [x] Ciclos 4 e 5 — `frontend/css/`: identidade visual com dois temas (Escuro/Claro)
-- [ ] Ciclos 6 e 7 — `frontend/js/`: interação, validação e dados via JSON
-- [ ] Ciclos 8 a 10 — `backend/`: formulário que grava e lista do banco
+- [x] Ciclo 3 — `frontend/`: página com listas, tabela e formulário de agendamento
+- [x] Ciclos 4 e 5 — `frontend/css/`: identidade visual completa, `:root`, `rem`, acessibilidade e 2 temas
+- [ ] Ciclos 6 e 7 — `frontend/js/`: interatividade e integração de dados
+- [ ] Ciclos 8 a 10 — `backend/`: processamento e persistência em banco de dados

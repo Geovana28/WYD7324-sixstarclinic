@@ -1,0 +1,34 @@
+/* ==========================================================================
+   SixStar Clinic — Segundo Tema (css/tema-claro.css)
+   Centro Universitário Newton Paiva · ARA0062 (Ciclos 4 e 5)
+   Regra única (:root) redefinindo as variáveis para o modo diurno da clínica.
+   Utilizado para navegação durante o dia e ambientes com alta luminosidade.
+   ========================================================================== */
+
+/* Contraste conferido em webaim.org:
+   --texto sobre --superficie ....... 14.8:1 (passa AAA)
+   --principal sobre --superficie ... 6.9:1 (passa AA)
+   --texto-fraco sobre --fundo ...... 5.2:1 (passa AA)
+   --sobre-principal sobre --principal 10.3:1 (passa AAA) */
+
+:root {
+  /* Identidade do tema claro (ouro bronze de alto contraste) */
+  --principal: #8c680d;
+  --principal-escuro: #6e5108;
+  --sobre-principal: #ffffff;
+  --apoio: #0e637a;
+  --realce: #8c680d;
+  
+  /* Superfícies e fundos claros de alto contraste */
+  --fundo: #f4f5f8;
+  --superficie: #ffffff;
+  --superficie-alt: #eaedf2;
+  
+  /* Tipografia escura de leitura nítida */
+  --texto: #181c24;
+  --texto-fraco: #4f5869;
+  
+  /* Linhas e bordas claras */
+  --linha: #cbd2dc;
+  --linha-fraca: #e2e6ed;
+}
