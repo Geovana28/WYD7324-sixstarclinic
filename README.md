@@ -4,7 +4,7 @@ Projeto da disciplina **ARA0062 · Desenvolvimento Web em HTML5, CSS, JavaScript
 
 **Assunto:** Portal institucional e sistema de agendamento de consultas médicas da SixStar Clinic, clínica de excelência e alto padrão em Belo Horizonte.
 
-**Equipe:** Geovana Moreira, Carlos Henrique Silva, Mariana Duarte Lopes, Lucas Gabriel Ferreira, Beatriz Helena Castro, Rafael Vinícius Mendes
+**Equipe:** Geovana Moreira, Gabriel Ferraz, Daniel Santos, Maria Eduarda Nascimento Silva, Angelina Damasceno
 
 ## Sobre o projeto
 
@@ -53,11 +53,10 @@ O segundo tema é o modo diurno (**Light Executive**), desenvolvido para pacient
 | Integrante | Matrícula | GitHub | Parte no estilo.css | Descrição da responsabilidade |
 |---|---|---|---|---|
 | Geovana Moreira | `202603656934` | [@Geovana28](https://github.com/Geovana28) | **Parte 1** | O `:root` e o tema: variáveis globais, box-sizing, contraste conferido e `tema-claro.css` |
-| Carlos Henrique Silva | `202603656935` | [@carlos-sixstar](https://github.com) | **Parte 2** | Tipografia: conexão com Google Fonts, escala hierárquica em `rem`, entrelinhas e títulos |
-| Mariana Duarte Lopes | `202603656936` | [@mariana-sixstar](https://github.com) | **Parte 3** | Página e conteúdo: `body`, `main`, contêineres, sections, hero, cards de médicos e diferenciais |
-| Lucas Gabriel Ferreira | `202603656937` | [@lucas-sixstar](https://github.com) | **Parte 4** | Cabeçalho e menu: `header`, logotipo, menu de navegação, botão e estados de hover |
-| Beatriz Helena Castro | `202603656938` | [@beatriz-sixstar](https://github.com) | **Parte 5** | Tabela: `border-collapse`, `caption`, cabeçalho temático, listras zebra e hover |
-| Rafael Vinícius Mendes | `202603656939` | [@rafael-sixstar](https://github.com) | **Parte 6** | Formulário e rodapé: `fieldset`, `legend`, `label`, inputs por `type`, `:focus`, botões e `footer` |
+| Gabriel Ferraz | `202601484478` | [@Devfrzz](https://github.com/Devfrzz) | **Partes 2 e 3** | Tipografia e Página: web font, escala `rem`, `body`, `main`, contêiner e cards |
+| Daniel Santos | `202602575281` | [@Daizen-Creator](https://github.com/Daizen-Creator) | **Parte 4** | Cabeçalho e menu: `header`, logotipo, menu de navegação e botões |
+| Maria Eduarda Nascimento Silva | `202601547003` | [@Mariaeduarda137](https://github.com/Mariaeduarda137) | **Parte 5** | Tabela: `border-collapse`, `caption`, cabeçalho temático, listras zebra e hover |
+| Angelina Damasceno | `202602060418` | [@Angesty](https://github.com/Angesty) | **Parte 6** | Formulário e rodapé: `fieldset`, `legend`, `label`, inputs por `type`, `:focus`, botões e `footer` |
 
 ## Estrutura do repositório
 

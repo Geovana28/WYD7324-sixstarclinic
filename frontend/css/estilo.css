@@ -50,7 +50,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. TIPOGRAFIA — Carlos Henrique Silva
+   2. TIPOGRAFIA — Gabriel Ferraz
    Escala hierárquica em rem, entrelinha e largura de leitura
    -------------------------------------------------------------------------- */
 body {
@@ -109,7 +109,7 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   3. PÁGINA E CONTEÚDO — Mariana Duarte Lopes
+   3. PÁGINA E CONTEÚDO — Gabriel Ferraz
    Estrutura de main, seções, contêiner de largura máxima e cards
    -------------------------------------------------------------------------- */
 .container {
@@ -363,7 +363,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   4. CABEÇALHO E MENU — Lucas Gabriel Ferreira
+   4. CABEÇALHO E MENU — Daniel Santos
    Header fixo, logotipo, navegação sem marcadores e links
    -------------------------------------------------------------------------- */
 .site-header {
@@ -491,7 +491,7 @@ section {
 }
 
 /* --------------------------------------------------------------------------
-   5. TABELA — Beatriz Helena Castro
+   5. TABELA — Maria Eduarda Nascimento Silva
    border-collapse, caption, th/td, zebra nas linhas e estados interativos
    -------------------------------------------------------------------------- */
 .schedule-lookup-box {
@@ -567,7 +567,7 @@ tbody tr:hover {
 }
 
 /* --------------------------------------------------------------------------
-   6. FORMULÁRIO E RODAPÉ — Rafael Vinícius Mendes
+   6. FORMULÁRIO E RODAPÉ — Angelina Damasceno
    fieldset, legend, label em bloco, inputs por type, botões, foco e footer
    -------------------------------------------------------------------------- */
 .booking-container {
