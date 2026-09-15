@@ -1,6 +1,6 @@
 # Os 6 Fantásticos — SixStar Clinic
 
-Projeto da disciplina **ARA0062 · Desenvolvimento Web em HTML5, CSS, JavaScript e PHP** — Centro Universitário Newton Paiva, 2026/2.
+Projeto da disciplina **WYD7324 · Desenvolvimento Web em HTML5, CSS, JavaScript e PHP** — Centro Universitário Newton Paiva, 2026/2.
 
 **Assunto:** Portal institucional e sistema de agendamento de consultas médicas da SixStar Clinic, clínica de excelência e alto padrão em Belo Horizonte.
 
