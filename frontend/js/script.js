@@ -1,6 +1,7 @@
 // ===========================================================================
-// SixStar Clinic — Comportamento da página
-// Este arquivo começa vazio de propósito: o JavaScript entra no ciclo 6.
-// Ele já está ligado ao index.html pela linha:
-// <script src="js/script.js" defer></script>
+// SixStar Clinic — Comportamento da página (frontend/js/script.js)
+// Aula 06 · Primeiros passos em JavaScript
 // ===========================================================================
+
+// Passo 1: conferindo se o script.js foi carregado pelo navegador com defer
+console.log("O script.js está ligado.");
