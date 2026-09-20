@@ -559,7 +559,7 @@ th {
 }
 
 tbody tr:nth-child(even) {
-  background-color: transparent; /* TODO Maria Eduarda: trocar para var(--superficie-alt) */
+  background-color: var(--superficie-alt);
 }
 
 tbody tr:hover {
