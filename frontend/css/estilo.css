@@ -701,7 +701,7 @@ select:focus,
 textarea:focus,
 button:focus,
 a:focus {
-  outline: none; /* TODO Angelina: trocar para 2px solid var(--realce) */
+  outline: 2px solid var(--realce);
   outline-offset: 2px;
   border-color: var(--realce);
 }
