@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#996515" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1e27" />
+      <stop offset="100%" stop-color="#0a0c10" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo arredondado elegante escuro com borda dourada -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bgGrad)" stroke="url(#goldGrad)" stroke-width="2" />
+
+  <!-- Estrela Dourada SixStar -->
+  <!-- 50,5 64,36 98,36 71,57 82,90 50,70 18,90 29,57 2,36 36,36 ajustada e escalada para 64x64 -->
+  <g transform="translate(7, 7) scale(0.5)">
+    <polygon points="50,6 64,36 98,36 71,57 82,90 50,70 18,90 29,57 2,36 36,36" fill="url(#goldGrad)" />
+    <!-- Cruz médica refinada no centro da estrela -->
+    <rect x="46" y="38" width="8" height="24" rx="2" fill="#0c0e12" />
+    <rect x="38" y="46" width="24" height="8" rx="2" fill="#0c0e12" />
+  </g>
+</svg>
