@@ -430,7 +430,7 @@ section {
 
 .nav-link:hover,
 .nav-link.active {
-  color: inherit; /* TODO Daniel: mudar para var(--principal) */
+  color: var(--principal);
 }
 
 .nav-link.active::after {
