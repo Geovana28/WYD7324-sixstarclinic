@@ -406,7 +406,7 @@
         </div>
 
         <!-- Formulário Interativo -->
-        <div class="booking-form-panel">
+       <div class="booking-form-panel">
           <form id="appointment-form" class="appointment-form" action="../backend/processa-contato.php" method="post">
             <fieldset>
               <legend class="form-title">Dados do Agendamento</legend>
@@ -427,11 +427,11 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="patient-email">E-mail *</label>
-                  <input type="email" id="patient-email" class="form-input" placeholder="roberto@exemplo.com" required>
+                  <input type="email" id="patient-email" name="email" class="form-input" placeholder="roberto@exemplo.com" required>
                 </div>
                 <div class="form-group">
                   <label for="specialty-select">Especialidade Desejada *</label>
-                  <select id="specialty-select" class="form-select" required>
+                  <select id="specialty-select" name="especialidade" class="form-select" required>
                     <option value="">Selecione uma especialidade</option>
                     <option value="Cardiologia">Cardiologia</option>
                     <option value="Dermatologia">Dermatologia</option>
@@ -479,7 +479,7 @@
 
               <div class="form-group">
                 <label for="appointment-notes">Observações ou Preferências (Opcional)</label>
-                <textarea id="appointment-notes" class="form-textarea" rows="2"
+                <textarea id="appointment-notes" name="observacoes" class="form-textarea" rows="2"
                   placeholder="Primeira vez na clínica, necessidade de exames complementares, etc."></textarea>
               </div>
 
