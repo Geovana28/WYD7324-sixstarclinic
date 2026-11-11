@@ -85,4 +85,4 @@ O segundo tema é o modo diurno (**Light Executive**), desenvolvido para pacient
 - [x] Ciclo 3 — `frontend/`: página com listas, tabela e formulário de agendamento
 - [x] Ciclos 4 e 5 — `frontend/css/`: identidade visual completa, `:root`, `rem`, acessibilidade e 2 temas
 - [ ] Ciclos 6 e 7 — `frontend/js/`: interatividade e integração de dados
-- [ ] Ciclos 8 a 10 — `backend/`: processamento e persistência em banco de dados
+- [x] Ciclos 8 a 10 — `backend/`: conexão segura via PDO e processamento com Prepared Statements no MySQL
