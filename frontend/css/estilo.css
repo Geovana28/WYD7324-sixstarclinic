@@ -49,6 +49,12 @@
   padding: 0;
 }
 
+/* Rolagem suave em toda a página e compensação do header fixo */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
 /* --------------------------------------------------------------------------
    2. TIPOGRAFIA — Gabriel Ferraz
    Escala hierárquica em rem, entrelinha e largura de leitura
