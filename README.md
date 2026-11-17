@@ -1,16 +1,25 @@
 # Os 6 Fantásticos — SixStar Clinic
 
-Projeto da disciplina **WYD7324 · Desenvolvimento Web em HTML5, CSS, JavaScript e PHP** — Centro Universitário Newton Paiva, 2026/2.
+Projeto da disciplina **WYD7324 / ARA0062 · Desenvolvimento Web em HTML5, CSS, JavaScript e PHP** — Centro Universitário Newton Paiva, 2026/2.
 
-**Assunto:** Portal institucional e sistema de agendamento de consultas médicas da SixStar Clinic, clínica de excelência e alto padrão em Belo Horizonte.
+**Assunto:** Portal institucional e sistema completo de agendamento de consultas médicas e gestão administrativa da SixStar Clinic, clínica médica de alto padrão em Belo Horizonte.
 
-**Equipe:** Geovana Moreira, Gabriel Ferraz, Daniel Santos, Maria Eduarda Nascimento Silva, Angelina Damasceno, Gabrielle Goulart
+**Equipe:** Geovana Moreira, Gabriel Ferraz, Daniel Santos, Maria Eduarda Nascimento Silva, Angelina Damasceno, Gabrielle Goulart.
+
+**Repositório GitHub:** [https://github.com/Geovana28/ara0062-sixstarclinic](https://github.com/Geovana28/ara0062-sixstarclinic)
+
+---
 
 ## Sobre o projeto
 
-A SixStar Clinic é uma clínica médica multidisciplinar de alto padrão voltada a pacientes que buscam atendimento médico humanizado aliado ao conforto, pontualidade e sofisticação dos melhores serviços seis estrelas. Localizada estrategicamente na Savassi, em Belo Horizonte, a clínica oferece consultas em seis especialidades essenciais: Cardiologia, Dermatologia, Neurologia, Ortopedia, Cirurgia Plástica e Oftalmologia, com equipamentos diagnósticos de última geração e corpo clínico formado por mestres e doutores com experiência internacional.
+A **SixStar Clinic** é uma clínica médica multidisciplinar de alto padrão voltada a pacientes que buscam atendimento médico humanizado aliado ao conforto, pontualidade e sofisticação de serviços seis estrelas. Localizada estrategicamente na Savassi, em Belo Horizonte, a clínica oferece atendimento em seis especialidades essenciais: Cardiologia, Dermatologia, Neurologia, Ortopedia, Cirurgia Plástica e Oftalmologia.
 
-Até o final do semestre, o site contará com sistema completo de consulta de escalas em tempo real, agendamento de consultas com envio e gravação segura em banco de dados relacional via PHP e MySQL, validação dinâmica de formulários com JavaScript, filtro instantâneo de médicos por especialidade e suporte nativo à alternância de temas visuais com acessibilidade plena e contraste rigorosamente auditado.
+O sistema conta com:
+- **Portal do Paciente:** Apresentação institucional de alto padrão, visualização de escala médica com tabela zebrada, filtro dinâmico de médicos por especialidade em tempo real, validação inteligente de formulário com máscara de WhatsApp e gravação segura no banco de dados MySQL via PHP PDO com Prepared Statements.
+- **Área Administrativa Restrita:** Sistema de autenticação com senhas criptografadas e controle de sessão (`session_start()`), contadores estatísticos em tempo real (Total de Consultas, Pendentes, Confirmadas), tabela de agendamentos recebidos e funcionalidade de cancelamento de consultas.
+- **Identidade Visual Acessível:** Layout responsivo desenvolvido com escala em `rem`, suporte nativo a dois temas (Dark Luxury e Light Executive) e índice de contraste auditado rigorosamente acima das diretrizes WCAG 2.1 (AA e AAA).
+
+---
 
 ## Identidade visual
 
@@ -29,7 +38,7 @@ A identidade visual foi concebida para transmitir sobriedade médica, sofistica�
 | `--realce` | `#e0b441` | Contorno de foco `:focus` e estados ativos | Dourado vibrante de alta visibilidade para navegação acessível por teclado |
 | `--linha` | `#2b3445` | Bordas e divisores de conteúdo | Cinza ardósia sutil que delimita cards e tabelas sem poluição visual |
 
-**Fonte:** `Fonte: "Montserrat", Arial, sans-serif` para todo o corpo textual da página (pesos 400, 500 e 600) aliada à família clássica `Cinzel, Georgia, serif` para títulos de prestígio, com terminação universal em família genérica (`sans-serif` e `serif`) garantindo robustez caso ocorram falhas de conexão.
+**Tipografia:** `Fonte: "Montserrat", Arial, sans-serif` para todo o corpo textual da página (pesos 300, 400, 500 e 600) aliada à família clássica `Cinzel, Georgia, serif` para títulos de prestígio, com terminação universal em família genérica (`sans-serif` e `serif`).
 
 ### Teste de Contraste (WebAIM Contrast Checker)
 
@@ -42,47 +51,82 @@ Todos os pares de cores cumprem com folga a exigência mínima de 4,5:1 (nível 
 | `--texto-fraco` sobre `--fundo` | **5,3:1** | AA (Conforme) |
 | `--sobre-principal` sobre `--principal` | **9,8:1** | AAA (Excelente) |
 
-### Segundo tema (`frontend/css/tema-claro.css`)
+---
 
-O segundo tema é o modo diurno (**Light Executive**), desenvolvido para pacientes que acessam o portal em ambientes de alta luminosidade ambiente ou em telas com reflexo durante o dia. Nele, a superfície torna-se branca pura (`#ffffff`), o fundo adota um tom platina suave (`#f4f5f8`), o texto passa a ser grafite escuro (`#181c24`), e o dourado principal é ajustado para um tom bronze de maior contraste (`#8c680d`), mantendo o índice de legibilidade em 14,8:1.
+## Equipe e Divisão de Responsabilidades
 
-## Equipe e divisão de trabalho
+**Líder do Projeto:** Geovana Moreira
 
-**Líder:** Geovana Moreira
+| Integrante | Matrícula | GitHub | Contribuição Principal no Projeto |
+|---|---|---|---|
+| **Geovana Moreira** | `202603656934` | [@Geovana28](https://github.com/Geovana28) | **Liderança & Backend Core:** Arquitetura do sistema, conexão segura MySQL via PDO com tratamento de exceções (`conexao.php`), processamento do formulário com sanitização e Prepared Statements (`processa-contato.php`), navegação fluida (*smooth scroll*) e documentação geral. |
+| **Daniel Santos** | `202602575281` | [@Daizen-Creator](https://github.com/Daizen-Creator) | **Banco de Dados & Autenticação:** Modelagem relacional do banco de dados com chaves e *seeds* de teste (`banco.sql`), tela de login administrativo (`login.php`), script de encerramento de sessão (`logout.php`) e trava de proteção de acesso restrito (`protecao.php`). |
+| **Gabriel Ferraz** | `202601484478` | [@Devfrzz](https://github.com/Devfrzz) | **Painel Administrativo & Temas:** Estrutura da tabela de agendamentos no painel PHP com contadores de topo (`painel.php`), script de cancelamento/exclusão via PDO (`excluir.php`), alternância de tema escuro/claro com persistência (`tema.js`) e filtros de médicos (`filtros.js`). |
+| **Maria Eduarda Nascimento Silva** | `202601547003` | [@Mariaeduarda137](https://github.com/Mariaeduarda137) | **Validações e Máscaras (Client-side):** Máscara dinâmica de WhatsApp em tempo real `(XX) XXXXX-XXXX`, validação completa do formulário de agendamento impedindo envio de campos vazios, e-mail inválido ou datas passadas com `event.preventDefault()` (`validacao.js`). |
+| **Gabrielle Goulart** | `202603062007` | [@GabrielleGoulart](https://github.com/GabrielleGoulart) | **Interface do Usuário & Telas Extras:** Nova página semântica de confirmação de agendamento para o paciente (`sucesso.html`), folha de estilos exclusiva para a área administrativa (`style-admin.css`) e responsividade dos cards médicos. |
+| **Angelina Damasceno** | `202602060418` | [@Angesty](https://github.com/Angesty) | **Frontend & Formulários:** Estruturação semântica do formulário de agendamento no `index.html` (mapeamento de `name`, `id`, `required`), estilização de inputs por tipo, estados de `:focus` acessíveis e rodapé institucional. |
 
-| Integrante | Matrícula | GitHub | Parte no estilo.css | Descrição da responsabilidade |
-|---|---|---|---|---|
-| Geovana Moreira | `202603656934` | [@Geovana28](https://github.com/Geovana28) | **Parte 1** | O `:root` e o tema: variáveis globais, box-sizing, contraste conferido e `tema-claro.css` |
-| Gabriel Ferraz | `202601484478` | [@Devfrzz](https://github.com/Devfrzz) | **Parte 2** | Tipografia: conexão com Google Fonts, escala hierárquica em `rem`, entrelinhas e títulos |
-| Gabrielle Goulart | `202603062007` | [@GabrielleGoulart](https://github.com/GabrielleGoulart) | **Parte 3** | Página e conteúdo: `body`, `main`, contêineres, sections, hero, cards de médicos e diferenciais |
-| Daniel Santos | `202602575281` | [@Daizen-Creator](https://github.com/Daizen-Creator) | **Parte 4** | Cabeçalho e menu: `header`, logotipo, menu de navegação e botões |
-| Maria Eduarda Nascimento Silva | `202601547003` | [@Mariaeduarda137](https://github.com/Mariaeduarda137) | **Parte 5** | Tabela: `border-collapse`, `caption`, cabeçalho temático, listras zebra e hover |
-| Angelina Damasceno | `202602060418` | [@Angesty](https://github.com/Angesty) | **Parte 6** | Formulário e rodapé: `fieldset`, `legend`, `label`, inputs por `type`, `:focus`, botões e `footer` |
+---
 
-## Estrutura do repositório
+## Estrutura do Repositório
 
-```
+```text
 .
-├─ README.md               folha de rosto e documentação da identidade visual
-├─ frontend/               arquivos de apresentação do cliente
-│   ├─ index.html          página principal sem nenhum style inline
-│   ├─ css/
-│   │   ├─ estilo.css      estilos principais com :root, rem e seções 1 a 6
-│   │   └─ tema-claro.css  segundo tema com regra única :root
-│   ├─ js/
-│   │   └─ script.js       scripts interativos (ciclos seguintes)
-│   └─ img/
-│       └─ .gitkeep        diretório para fotos dos profissionais
-└─ backend/                recursos de servidor
-    ├─ config/
-    │   └─ conexao.php     conexão ao banco de dados MySQL
-    └─ processa-contato.php recebimento de agendamentos
+├── README.md                      # Documentação completa, equipe e guia de execução
+├── frontend/                      # Camada de apresentação (Client-side)
+│   ├── index.html                 # Página inicial institucional e formulário de agendamento
+│   ├── sucesso.html               # Página de confirmação de agendamento solicitado
+│   ├── css/
+│   │   ├── estilo.css             # Folha de estilos principal (:root, rem, responsividade)
+│   │   └── tema-claro.css         # Segundo tema (Light Executive)
+│   ├── js/
+│   │   ├── filtros.js             # Filtro dinâmico de médicos por especialidade
+│   │   ├── tema.js                # Alternância de tema com persistência no localStorage
+│   │   ├── validacao.js           # Máscara de telefone e validações client-side
+│   │   └── script.js              # Script inicial do projeto
+│   └── img/                       # Identidade gráfica, logotipos e favicons
+│       ├── favicon.png
+│       ├── favicon.svg
+│       └── logo-sixstar.jpg
+└── backend/                       # Camada de servidor e banco de dados (Server-side)
+    ├── config/
+    │   └── conexao.php            # Conexão segura MySQL com PDO e charset utf8mb4
+    ├── sql/
+    │   └── banco.sql              # Script DDL/DML de criação do banco e dados de teste (seeds)
+    ├── processa-contato.php       # Recebimento do formulário via POST e INSERT no banco
+    └── admin/                     # Área restrita da clínica (Backoffice)
+        ├── login.php              # Autenticação de usuários administrativos com hash
+        ├── logout.php             # Encerramento de sessão
+        ├── protecao.php           # Middleware de proteção contra acesso não autorizado
+        ├── painel.php             # Dashboard de contadores e listagem de agendamentos
+        ├── excluir.php            # Ação de cancelamento/exclusão de agendamentos
+        └── style-admin.css        # Folha de estilos exclusiva da área administrativa
 ```
 
-## Andamento por ciclo
+---
 
-- [x] Ciclo 3 — repositório, equipe e estrutura do projeto
-- [x] Ciclo 3 — `frontend/`: página com listas, tabela e formulário de agendamento
-- [x] Ciclos 4 e 5 — `frontend/css/`: identidade visual completa, `:root`, `rem`, acessibilidade e 2 temas
-- [ ] Ciclos 6 e 7 — `frontend/js/`: interatividade e integração de dados
-- [x] Ciclos 8 a 10 — `backend/`: conexão segura via PDO e processamento com Prepared Statements no MySQL
+## Como executar o projeto localmente (XAMPP)
+
+1. **Clonar o repositório:**
+   Coloque a pasta do projeto dentro do diretório `htdocs` do seu XAMPP (ex.: `C:\xampp\htdocs\sixstar-clinic`).
+2. **Iniciar os serviços:**
+   Abra o **XAMPP Control Panel** e inicie o **Apache** e o **MySQL**.
+3. **Importar o Banco de Dados:**
+   - Acesse o phpMyAdmin: [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
+   - Vá na aba **Importar** e selecione o arquivo `backend/sql/banco.sql`.
+   - Clique em **Executar** (o banco `sixstar_clinic` será criado com tabelas e dados de teste).
+4. **Acessar a aplicação no navegador:**
+   - 🌐 **Portal do Paciente:** [http://localhost/sixstar-clinic/frontend/index.html](http://localhost/sixstar-clinic/frontend/index.html)
+   - 🔐 **Painel Administrativo:** [http://localhost/sixstar-clinic/backend/admin/login.php](http://localhost/sixstar-clinic/backend/admin/login.php)
+     - **Usuário:** `admin`
+     - **Senha:** `admin123`
+
+---
+
+## Andamento por Ciclo Acadêmico
+
+- [x] **Ciclo 3** — Planejamento, repositório Git, equipe e estrutura do projeto
+- [x] **Ciclo 3** — `frontend/`: Página institucional com listas, tabela zebrada e formulário
+- [x] **Ciclos 4 e 5** — `frontend/css/`: Identidade visual completa, variáveis `:root`, unidades `rem`, 2 temas e WCAG
+- [x] **Ciclos 6 e 7** — `frontend/js/`: Validações inteligentes, máscara em tempo real e filtros de médicos
+- [x] **Ciclos 8 a 10** — `backend/`: Conexão PDO segura, inserção com Prepared Statements, CRUD administrativo e autenticação
