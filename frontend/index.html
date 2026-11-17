@@ -12,12 +12,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/estilo.css">
-  <!-- <link rel="stylesheet" href="css/tema-claro.css"> -->
+  <link rel="stylesheet" href="css/estilo.css?v=2">
+  <!-- Tema claro: começa desativado (media="not all"); o tema.js liga/desliga -->
+  <link rel="stylesheet" href="css/tema-claro.css?v=2" id="tema-claro-css" media="not all">
+  <script src="js/tema.js?v=2"></script>
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/favicon.png">
-  <script src="js/script.js" defer></script>
+  <script src="js/script.js?v=2" defer></script>
 </head>
 
 <body>
@@ -52,7 +54,7 @@
       </nav>
 
       <div class="header-actions">
-        <!-- Switch de Tema 100% CSS Puro (sem depender de JS) -->
+        <!-- Switch de Tema: checkbox + label (rótulo troca via CSS, cores via tema.js) -->
         <input type="checkbox" id="theme-checkbox" class="theme-checkbox" aria-label="Alternar tema">
         <label for="theme-checkbox" class="theme-toggle-btn" title="Alternar entre tema Escuro e Claro">
           <span class="theme-icon moon-icon">🌙</span>
@@ -577,7 +579,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/filtros.js" defer></script>
+  <script src="js/filtros.js?v=2" defer></script>
   <script src="js/validacao.js" defer></script>
 </body>
 

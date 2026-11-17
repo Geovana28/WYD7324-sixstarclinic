@@ -52,7 +52,7 @@
 /* Rolagem suave em toda a página e compensação do header fixo */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 5rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -384,13 +384,23 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--e-2) 0;
+  gap: var(--e-3);
+  padding: 0.6rem 0;
+  width: 95%;
+  max-width: 80rem;
+  min-height: 4rem;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
   gap: var(--e-1);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.logo-text {
+  line-height: 1.2;
 }
 
 .logo-symbol {
@@ -421,17 +431,19 @@ section {
 
 .main-nav {
   display: flex;
-  gap: var(--e-3);
+  align-items: center;
+  gap: 1.25rem;
   list-style: none;
 }
 
 .nav-link {
   color: var(--texto);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 500;
   text-decoration: none;
   padding: 0.3rem 0;
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -452,7 +464,13 @@ section {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: var(--e-2);
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.header-actions .btn-compact,
+.theme-toggle-btn {
+  white-space: nowrap;
 }
 
 .theme-checkbox {
@@ -469,6 +487,9 @@ section {
   font-size: 0.82rem;
   font-weight: 600;
   font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .theme-toggle-btn:hover {
@@ -859,6 +880,33 @@ footer,
 /* --------------------------------------------------------------------------
    RESPONSIVIDADE (MEDIA QUERIES)
    -------------------------------------------------------------------------- */
+
+/* Card de médico escondido pelo filtro de especialidade */
+.doctor-card.is-hidden {
+  display: none;
+}
+
+/* Cabeçalho: telas médias — botão de tema só com ícone */
+@media (max-width: 78rem) {
+  .theme-label {
+    display: none !important;
+  }
+
+  .main-nav {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.84rem;
+  }
+}
+
+/* Cabeçalho: notebooks pequenos — esconde o "Agendar Agora" (já existe no menu) */
+@media (max-width: 66rem) {
+  .header-actions .btn-primary-gold {
+    display: none;
+  }
+}
 @media (max-width: 53.125rem) {
   .booking-container {
     grid-template-columns: 1fr;

@@ -15,9 +15,9 @@ Projeto da disciplina **WYD7324 / ARA0062 · Desenvolvimento Web em HTML5, CSS, 
 A **SixStar Clinic** é uma clínica médica multidisciplinar de alto padrão voltada a pacientes que buscam atendimento médico humanizado aliado ao conforto, pontualidade e sofisticação de serviços seis estrelas. Localizada estrategicamente na Savassi, em Belo Horizonte, a clínica oferece atendimento em seis especialidades essenciais: Cardiologia, Dermatologia, Neurologia, Ortopedia, Cirurgia Plástica e Oftalmologia.
 
 O sistema conta com:
-- **Portal do Paciente:** Apresentação institucional de alto padrão, visualização de escala médica com tabela zebrada, filtro dinâmico de médicos por especialidade em tempo real, validação inteligente de formulário com máscara de WhatsApp e gravação segura no banco de dados MySQL via PHP PDO com Prepared Statements.
-- **Área Administrativa Restrita:** Sistema de autenticação com senhas criptografadas e controle de sessão (`session_start()`), contadores estatísticos em tempo real (Total de Consultas, Pendentes, Confirmadas), tabela de agendamentos recebidos e funcionalidade de cancelamento de consultas.
-- **Identidade Visual Acessível:** Layout responsivo desenvolvido com escala em `rem`, suporte nativo a dois temas (Dark Luxury e Light Executive) e índice de contraste auditado rigorosamente acima das diretrizes WCAG 2.1 (AA e AAA).
+- **Portal do Paciente:** Apresentação institucional de alto padrão, visualização de escala médica com tabela zebrada, filtro dinâmico de médicos por especialidade em tempo real (nos cards e no formulário — ao escolher a especialidade, só aparecem os médicos dela), validação inteligente de formulário com máscara de WhatsApp, rolagem suave com destaque do menu ativo e gravação segura no banco de dados MySQL via PHP PDO com Prepared Statements.
+- **Área Administrativa Restrita:** Sistema de autenticação com senhas criptografadas e controle de sessão (`session_start()`), contadores estatísticos em tempo real (Total de Consultas, Pendentes, Confirmadas), tabela de agendamentos recebidos, fluxo de status da consulta (**Pendente → Confirmado → Concluído**) e cancelamento de consultas — todas as ações protegidas por login.
+- **Identidade Visual Acessível:** Layout responsivo desenvolvido com escala em `rem`, dois temas (Dark Luxury e Light Executive) com alternância por botão e preferência salva no navegador, e índice de contraste auditado acima das diretrizes WCAG 2.1 (AA e AAA).
 
 ---
 
@@ -38,7 +38,26 @@ A identidade visual foi concebida para transmitir sobriedade médica, sofistica�
 | `--realce` | `#e0b441` | Contorno de foco `:focus` e estados ativos | Dourado vibrante de alta visibilidade para navegação acessível por teclado |
 | `--linha` | `#2b3445` | Bordas e divisores de conteúdo | Cinza ardósia sutil que delimita cards e tabelas sem poluição visual |
 
-**Tipografia:** `Fonte: "Montserrat", Arial, sans-serif` para todo o corpo textual da página (pesos 300, 400, 500 e 600) aliada à família clássica `Cinzel, Georgia, serif` para títulos de prestígio, com terminação universal em família genérica (`sans-serif` e `serif`).
+**Tipografia:** `Fonte: "Montserrat", Arial, sans-serif` para todo o corpo textual da página (pesos 300 a 700) aliada à família clássica `Cinzel, Georgia, serif` para títulos de prestígio, com terminação universal em família genérica (`sans-serif` e `serif`).
+
+### Segundo tema — Light Executive (`tema-claro.css`)
+
+Ativado pelo botão 🌙/☀️ do cabeçalho (`tema.js`). O arquivo redefine apenas as variáveis do `:root`, então toda a página muda de cor sem duplicar regras. A escolha fica salva no `localStorage`.
+
+| Variável | Hex (claro) | Papel |
+|---|---|---|
+| `--principal` | `#8c680d` | Ouro bronze de alto contraste para fundo claro |
+| `--sobre-principal` | `#ffffff` | Texto sobre o botão principal |
+| `--fundo` | `#f4f5f8` | Fundo da página |
+| `--superficie` | `#ffffff` | Cards, tabelas e cabeçalho |
+| `--texto` | `#181c24` | Texto principal |
+
+| Par de cores (tema claro) | Contraste | Nível WCAG |
+|---|---|---|
+| `--texto` sobre `--superficie` | **14,8:1** | AAA |
+| `--principal` sobre `--superficie` | **6,9:1** | AA |
+| `--texto-fraco` sobre `--fundo` | **5,2:1** | AA |
+| `--sobre-principal` sobre `--principal` | **10,3:1** | AAA |
 
 ### Teste de Contraste (WebAIM Contrast Checker)
 
@@ -61,7 +80,7 @@ Todos os pares de cores cumprem com folga a exigência mínima de 4,5:1 (nível 
 |---|---|---|---|
 | **Geovana Moreira** | `202603656934` | [@Geovana28](https://github.com/Geovana28) | **Liderança & Backend Core:** Arquitetura do sistema, conexão segura MySQL via PDO com tratamento de exceções (`conexao.php`), processamento do formulário com sanitização e Prepared Statements (`processa-contato.php`), navegação fluida (*smooth scroll*) e documentação geral. |
 | **Daniel Santos** | `202602575281` | [@Daizen-Creator](https://github.com/Daizen-Creator) | **Banco de Dados & Autenticação:** Modelagem relacional do banco de dados com chaves e *seeds* de teste (`banco.sql`), tela de login administrativo (`login.php`), script de encerramento de sessão (`logout.php`) e trava de proteção de acesso restrito (`protecao.php`). |
-| **Gabriel Ferraz** | `202601484478` | [@Devfrzz](https://github.com/Devfrzz) | **Painel Administrativo & Temas:** Estrutura da tabela de agendamentos no painel PHP com contadores de topo (`painel.php`), script de cancelamento/exclusão via PDO (`excluir.php`), alternância de tema escuro/claro com persistência (`tema.js`) e filtros de médicos (`filtros.js`). |
+| **Gabriel Ferraz** | `202601484478` | [@Devfrzz](https://github.com/Devfrzz) | **Painel Administrativo & Temas:** Estrutura da tabela de agendamentos no painel PHP com contadores de topo (`painel.php`), script de cancelamento/exclusão via PDO (`excluir.php`), atualização de status Confirmar/Concluir (`atualizar-status.php`), alternância de tema escuro/claro com persistência (`tema.js`) e filtros de médicos (`filtros.js`). |
 | **Maria Eduarda Nascimento Silva** | `202601547003` | [@Mariaeduarda137](https://github.com/Mariaeduarda137) | **Validações e Máscaras (Client-side):** Máscara dinâmica de WhatsApp em tempo real `(XX) XXXXX-XXXX`, validação completa do formulário de agendamento impedindo envio de campos vazios, e-mail inválido ou datas passadas com `event.preventDefault()` (`validacao.js`). |
 | **Gabrielle Goulart** | `202603062007` | [@GabrielleGoulart](https://github.com/GabrielleGoulart) | **Interface do Usuário & Telas Extras:** Nova página semântica de confirmação de agendamento para o paciente (`sucesso.html`), folha de estilos exclusiva para a área administrativa (`style-admin.css`) e responsividade dos cards médicos. |
 | **Angelina Damasceno** | `202602060418` | [@Angesty](https://github.com/Angesty) | **Frontend & Formulários:** Estruturação semântica do formulário de agendamento no `index.html` (mapeamento de `name`, `id`, `required`), estilização de inputs por tipo, estados de `:focus` acessíveis e rodapé institucional. |
@@ -80,10 +99,10 @@ Todos os pares de cores cumprem com folga a exigência mínima de 4,5:1 (nível 
 │   │   ├── estilo.css             # Folha de estilos principal (:root, rem, responsividade)
 │   │   └── tema-claro.css         # Segundo tema (Light Executive)
 │   ├── js/
-│   │   ├── filtros.js             # Filtro dinâmico de médicos por especialidade
+│   │   ├── filtros.js             # Filtro de médicos por especialidade (cards e formulário)
 │   │   ├── tema.js                # Alternância de tema com persistência no localStorage
 │   │   ├── validacao.js           # Máscara de telefone e validações client-side
-│   │   └── script.js              # Script inicial do projeto
+│   │   └── script.js              # Rolagem suave e destaque do menu ativo
 │   └── img/                       # Identidade gráfica, logotipos e favicons
 │       ├── favicon.png
 │       ├── favicon.svg
@@ -99,7 +118,9 @@ Todos os pares de cores cumprem com folga a exigência mínima de 4,5:1 (nível 
         ├── logout.php             # Encerramento de sessão
         ├── protecao.php           # Middleware de proteção contra acesso não autorizado
         ├── painel.php             # Dashboard de contadores e listagem de agendamentos
+        ├── atualizar-status.php   # Confirmar / concluir agendamentos (UPDATE com lista branca)
         ├── excluir.php            # Ação de cancelamento/exclusão de agendamentos
+        ├── admin.js               # Confirmação client-side antes de cancelar agendamento
         └── style-admin.css        # Folha de estilos exclusiva da área administrativa
 ```
 

@@ -15,15 +15,16 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 // 2. Inclui o arquivo de conexão PDO com o MySQL
 require_once __DIR__ . '/config/conexao.php';
 
-// 3. Coleta e sanitiza os dados enviados pelo formulário
-$nome          = isset($_POST['nome']) ? trim(htmlspecialchars($_POST['nome'], ENT_QUOTES, 'UTF-8')) : '';
-$telefone      = isset($_POST['telefone']) ? trim(htmlspecialchars($_POST['telefone'], ENT_QUOTES, 'UTF-8')) : '';
+// 3. Coleta e limpa os dados enviados pelo formulário
+// (A proteção contra SQL Injection é feita pelo prepare(?) e contra XSS pelo htmlspecialchars no painel.php)
+$nome          = isset($_POST['nome']) ? trim(strip_tags($_POST['nome'])) : '';
+$telefone      = isset($_POST['telefone']) ? trim(strip_tags($_POST['telefone'])) : '';
 $email         = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : '';
-$especialidade = isset($_POST['especialidade']) ? trim(htmlspecialchars($_POST['especialidade'], ENT_QUOTES, 'UTF-8')) : '';
-$medico        = isset($_POST['medico']) ? trim(htmlspecialchars($_POST['medico'], ENT_QUOTES, 'UTF-8')) : '';
+$especialidade = isset($_POST['especialidade']) ? trim(strip_tags($_POST['especialidade'])) : '';
+$medico        = isset($_POST['medico']) ? trim(strip_tags($_POST['medico'])) : '';
 $data_consulta = isset($_POST['data_consulta']) ? trim($_POST['data_consulta']) : '';
 $horario       = isset($_POST['horario']) ? trim($_POST['horario']) : '';
-$observacoes   = isset($_POST['observacoes']) ? trim(htmlspecialchars($_POST['observacoes'], ENT_QUOTES, 'UTF-8')) : '';
+$observacoes   = isset($_POST['observacoes']) ? trim(strip_tags($_POST['observacoes'])) : '';
 
 // 4. Validação básica no lado do servidor dos campos obrigatórios
 if (empty($nome) || empty($telefone) || empty($email) || empty($especialidade) || empty($medico) || empty($data_consulta) || empty($horario)) {
@@ -62,6 +63,6 @@ try {
     exit;
 
 } catch (PDOException $e) {
-    // Tratamento de erro seguro
-    die("Erro ao registrar o agendamento no banco de dados. Detalhe: " . $e->getMessage());
+    // Tratamento de erro seguro sem expor detalhes internos do banco
+    die("Erro ao registrar o agendamento no banco de dados. Por favor, tente novamente.");
 }

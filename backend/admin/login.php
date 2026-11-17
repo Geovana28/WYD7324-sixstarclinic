@@ -16,6 +16,7 @@ if (!empty($_SESSION['admin_logado'])) {
 require_once __DIR__ . '/../config/conexao.php';
 
 $erro = '';
+$usuario = ''; // valor que volta para o campo "Usuário" (vazio na primeira visita)
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = isset($_POST['usuario']) ? trim($_POST['usuario']) : '';
@@ -54,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style-admin.css">
+  <link rel="stylesheet" href="style-admin.css?v=2">
   <link rel="icon" type="image/png" href="../../frontend/img/favicon.png">
   <style>
     .login-erro {

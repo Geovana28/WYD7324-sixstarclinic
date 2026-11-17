@@ -40,7 +40,11 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Administrativo — SixStar Clinic</title>
-    <link rel="stylesheet" href="style-admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-admin.css?v=3">
+    <link rel="icon" type="image/png" href="../../frontend/img/favicon.png">
 </head>
 <body>
     <header class="admin-header">
@@ -131,12 +135,28 @@ try {
                                         </span>
                                     </td>
                                     <td class="col-acoes">
-                                        <a href="excluir.php?id=<?php echo (int)$consulta['id']; ?>" 
-                                           class="btn-excluir" 
-                                           onclick="return confirm('Deseja realmente cancelar este agendamento de <?php echo addslashes(htmlspecialchars($consulta['nome'])); ?>?');"
-                                           title="Cancelar / Excluir agendamento">
-                                            Cancelar ✖
-                                        </a>
+                                        <?php $statusAtual = strtolower($consulta['status']); ?>
+                                        <div class="acoes-wrapper">
+                                            <?php if ($statusAtual === 'pendente'): ?>
+                                                <a href="atualizar-status.php?id=<?php echo (int)$consulta['id']; ?>&amp;status=confirmado"
+                                                   class="btn-confirmar"
+                                                   title="Confirmar este agendamento">
+                                                    Confirmar ✔
+                                                </a>
+                                            <?php elseif ($statusAtual === 'confirmado'): ?>
+                                                <a href="atualizar-status.php?id=<?php echo (int)$consulta['id']; ?>&amp;status=concluido"
+                                                   class="btn-concluir"
+                                                   title="Marcar consulta como realizada">
+                                                    Concluir ★
+                                                </a>
+                                            <?php endif; ?>
+                                            <a href="excluir.php?id=<?php echo (int)$consulta['id']; ?>" 
+                                               class="btn-excluir" 
+                                               data-nome="<?php echo htmlspecialchars($consulta['nome'], ENT_QUOTES, 'UTF-8'); ?>"
+                                               title="Cancelar / Excluir agendamento">
+                                                Cancelar ✖
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -150,5 +170,6 @@ try {
             </div>
         </section>
     </main>
+    <script src="admin.js" defer></script>
 </body>
 </html>
