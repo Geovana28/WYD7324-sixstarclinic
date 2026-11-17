@@ -1,8 +1,7 @@
-/* ===========================================================================
-   SixStar Clinic — Folha de Estilos Exclusiva da Área Administrativa
+/* 
+   SixStar Clinic — Folha Área Administrativa
    Paleta: Grafite Profundo & Dourado Nobre
-   ========================================================================== */
-
+                                            */
 :root {
   --admin-bg: #0f1115;
   --admin-card-bg: #161920;
@@ -33,9 +32,8 @@ body {
   min-height: 100vh;
 }
 
-/* ===========================================================================
-   1. Tela de Login (login.php)
-   ========================================================================== */
+/* 1. Tela de Login (login.php) */
+
 .admin-login-body {
   display: flex;
   align-items: center;
@@ -115,9 +113,8 @@ body {
   opacity: 0.9;
 }
 
-/* ===========================================================================
-   2. Painel Administrativo (painel.php)
-   ========================================================================== */
+/* 2. Painel Administrativo (painel.php) */
+
 .admin-header {
   background-color: var(--admin-card-bg);
   border-bottom: 1px solid var(--admin-border);
@@ -305,4 +302,10 @@ body {
 .btn-cancel {
   background-color: #dc3545;
   color: #fff;
+}
+
+/* 3. Transição Global para Linhas da Tabela */
+
+.admin-table tbody tr {
+  transition: background-color 0.2s ease-in-out;
 }
